@@ -1,0 +1,2067 @@
+2021-04-09 17:33:37.147 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: OBE目标达成度分析, TestCase ID: d04fa00a-c7be-404c-bf29-7e3fc5d0c8a4
+2021-04-09 17:33:37.150 | INFO     | httprunner.runner:__run_step:292 - run step begin: 用户登录成功！ >>>>>>
+2021-04-09 17:33:37.370 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.10.181, Port: 51133
+2021-04-09 17:33:37.370 | DEBUG    | httprunner.client:request:194 - server IP: 121.36.22.149, Port: 443
+2021-04-09 17:33:37.371 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://courseapi.tongshike.cn/users/login
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "HRUN-Request-ID": "HRUN-d04fa00a-c7be-404c-bf29-7e3fc5d0c8a4-817151",
+    "Content-Length": "57"
+}
+cookies  : {}
+body     : {
+    "loginName": "chenqinggangtea",
+    "password": "wenhua123"
+}
+
+2021-04-09 17:33:37.375 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx",
+    "Date": "Fri, 09 Apr 2021 09:33:07 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "userId": 6546435,
+    "sex": "1",
+    "headimage": "https://courseweb.tongshike.cn/common/img/defaultHeaderLg.png",
+    "loginName": "chenqinggangtea",
+    "name": "陈庆港",
+    "orgId": 1,
+    "roleId": 8,
+    "institutionId": "740",
+    "authorization": "5E2D125DE20AEB79D2688A51BF486952"
+}
+
+2021-04-09 17:33:37.375 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 218.49 ms, response_length: 0 bytes
+2021-04-09 17:33:37.376 | INFO     | httprunner.response:extract:176 - extract mapping: {'authorization': '5E2D125DE20AEB79D2688A51BF486952'}
+2021-04-09 17:33:37.376 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-04-09 17:33:37.376 | INFO     | httprunner.runner:__run_step:304 - run step end: 用户登录成功！ <<<<<<
+
+2021-04-09 17:33:37.377 | INFO     | httprunner.runner:__run_step:292 - run step begin: 获取课程列表 >>>>>>
+2021-04-09 17:33:37.464 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.10.181, Port: 51133
+2021-04-09 17:33:37.465 | DEBUG    | httprunner.client:request:194 - server IP: 121.36.22.149, Port: 443
+2021-04-09 17:33:37.465 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://courseapi.tongshike.cn/courses?keyword=&publishStatus=1&type=1&pn=1&ps=15&octypeId=&lang=zh
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "Authorization": "5E2D125DE20AEB79D2688A51BF486952",
+    "HRUN-Request-ID": "HRUN-d04fa00a-c7be-404c-bf29-7e3fc5d0c8a4-817377"
+}
+cookies  : {}
+body     : None
+
+2021-04-09 17:33:37.466 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx",
+    "Date": "Fri, 09 Apr 2021 09:33:07 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "pn": 1,
+    "ps": 15,
+    "total": 7,
+    "courseList": [
+        {
+            "id": 33834,
+            "creator": 6546435,
+            "name": "内网测试课程",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "981875",
+            "updateTime": 1617888133000,
+            "type": 1,
+            "description": "一些简介",
+            "publishStatus": 1,
+            "userCount": 71,
+            "classCount": 3,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": 740,
+            "academyName": "中文系",
+            "octypeId": 21
+        },
+        {
+            "id": 33800,
+            "creator": 6546517,
+            "name": "Uclass资源本地播放1",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937132358.png?imageView2/1/w/800/h/450",
+            "courseCode": "043606",
+            "updateTime": 1617785904000,
+            "type": 1,
+            "description": "一些简介",
+            "publishStatus": 1,
+            "userCount": 54,
+            "classCount": 7,
+            "entered": 1,
+            "permissionGroupId": 2,
+            "academyId": 0,
+            "octypeId": 29
+        },
+        {
+            "id": 33821,
+            "creator": 6546517,
+            "name": "测试环境-3.26迭代需求",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "731336",
+            "updateTime": 1616462406000,
+            "type": 1,
+            "description": "一些简介",
+            "publishStatus": 1,
+            "userCount": 25,
+            "classCount": 4,
+            "entered": 1,
+            "permissionGroupId": 2,
+            "academyId": 0,
+            "octypeId": 21
+        },
+        {
+            "id": 33815,
+            "creator": 6546435,
+            "name": "jmeter课程",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "053033",
+            "updateTime": 1611731861000,
+            "type": 1,
+            "publishStatus": 1,
+            "userCount": 10000,
+            "classCount": 1,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": 740,
+            "academyName": "中文系"
+        },
+        {
+            "id": 33779,
+            "creator": 6546435,
+            "name": "测试_编辑的课程",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "920118",
+            "updateTime": 1609224311000,
+            "type": 1,
+            "publishStatus": 1,
+            "userCount": 0,
+            "classCount": 1,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": 740,
+            "academyName": "中文系",
+            "octypeId": 53
+        },
+        {
+            "id": 33778,
+            "creator": 6546435,
+            "name": "test_kc_cqg_01",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "474992",
+            "updateTime": 1609211236000,
+            "type": 1,
+            "publishStatus": 1,
+            "userCount": 108,
+            "classCount": 9,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": -1,
+            "octypeId": 53
+        },
+        {
+            "id": 33776,
+            "creator": 5157664,
+            "name": "【考试-试卷封存】测试专用课程",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "473095",
+            "updateTime": 1608621691000,
+            "type": 1,
+            "publishStatus": 1,
+            "userCount": 10,
+            "classCount": 1,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": 17264,
+            "academyName": "计算机科学与技术"
+        }
+    ]
+}
+
+2021-04-09 17:33:37.467 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 86.8 ms, response_length: 0 bytes
+2021-04-09 17:33:37.467 | INFO     | httprunner.response:extract:176 - extract mapping: {'ocid': 33834}
+2021-04-09 17:33:37.468 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-04-09 17:33:37.468 | INFO     | httprunner.runner:__run_step:304 - run step end: 获取课程列表 <<<<<<
+
+2021-04-09 17:33:37.468 | INFO     | httprunner.runner:__run_step:292 - run step begin: 新建OBE设置信息 >>>>>>
+2021-04-09 17:33:37.870 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.10.181, Port: 51133
+2021-04-09 17:33:37.871 | DEBUG    | httprunner.client:request:194 - server IP: 121.36.22.149, Port: 443
+2021-04-09 17:33:37.876 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://courseapi.tongshike.cn/obe
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "Authorization": "5E2D125DE20AEB79D2688A51BF486952",
+    "HRUN-Request-ID": "HRUN-d04fa00a-c7be-404c-bf29-7e3fc5d0c8a4-817470",
+    "Content-Length": "4085"
+}
+cookies  : {}
+body     : {
+    "id": 7,
+    "ocId": 33834,
+    "passScore": 0.6,
+    "linkList": [
+        {
+            "name": "作业1"
+        },
+        {
+            "name": "作业2"
+        },
+        {
+            "name": "作业3"
+        },
+        {
+            "name": "作业4"
+        },
+        {
+            "name": "作业5"
+        },
+        {
+            "name": "作业6"
+        },
+        {
+            "name": "作业7"
+        },
+        {
+            "name": "作业8"
+        },
+        {
+            "name": "作业9"
+        },
+        {
+            "name": "作业10"
+        }
+    ],
+    "outcomeList": [
+        {
+            "description": "这是一个目标描述1",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 1,
+                    "code": "A"
+                },
+                {
+                    "factor": 1,
+                    "code": "B"
+                },
+                {
+                    "factor": 1,
+                    "code": "C"
+                },
+                {
+                    "factor": 1,
+                    "code": "D"
+                },
+                {
+                    "factor": 1,
+                    "code": "E"
+                },
+                {
+                    "factor": 1,
+                    "code": "F"
+                },
+                {
+                    "factor": 1,
+                    "code": "G"
+                },
+                {
+                    "factor": 1,
+                    "code": "H"
+                },
+                {
+                    "factor": 1,
+                    "code": "I"
+                },
+                {
+                    "factor": 1,
+                    "code": "J"
+                }
+            ]
+        },
+        {
+            "description": "这是一个目标描述2",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 1,
+                    "code": "A"
+                },
+                {
+                    "factor": 1,
+                    "code": "B"
+                },
+                {
+                    "factor": 1,
+                    "code": "C"
+                },
+                {
+                    "factor": 1,
+                    "code": "D"
+                },
+                {
+                    "factor": 1,
+                    "code": "E"
+                },
+                {
+                    "factor": 1,
+                    "code": "F"
+                },
+                {
+                    "factor": 1,
+                    "code": "G"
+                },
+                {
+                    "factor": 1,
+                    "code": "H"
+                },
+                {
+                    "factor": 1,
+                    "code": "I"
+                },
+                {
+                    "factor": 1,
+                    "code": "J"
+                }
+            ]
+        },
+        {
+            "description": "这是一个目标描述3",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 1,
+                    "code": "A"
+                },
+                {
+                    "factor": 1,
+                    "code": "B"
+                },
+                {
+                    "factor": 1,
+                    "code": "C"
+                },
+                {
+                    "factor": 1,
+                    "code": "D"
+                },
+                {
+                    "factor": 1,
+                    "code": "E"
+                },
+                {
+                    "factor": 1,
+                    "code": "F"
+                },
+                {
+                    "factor": 1,
+                    "code": "G"
+                },
+                {
+                    "factor": 1,
+                    "code": "H"
+                },
+                {
+                    "factor": 1,
+                    "code": "I"
+                },
+                {
+                    "factor": 1,
+                    "code": "J"
+                }
+            ]
+        },
+        {
+            "description": "这是一个目标描述4",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 1,
+                    "code": "A"
+                },
+                {
+                    "factor": 1,
+                    "code": "B"
+                },
+                {
+                    "factor": 1,
+                    "code": "C"
+                },
+                {
+                    "factor": 1,
+                    "code": "D"
+                },
+                {
+                    "factor": 1,
+                    "code": "E"
+                },
+                {
+                    "factor": 1,
+                    "code": "F"
+                },
+                {
+                    "factor": 1,
+                    "code": "G"
+                },
+                {
+                    "factor": 1,
+                    "code": "H"
+                },
+                {
+                    "factor": 1,
+                    "code": "I"
+                },
+                {
+                    "factor": 1,
+                    "code": "J"
+                }
+            ]
+        },
+        {
+            "description": "这是一个目标描述5",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 1,
+                    "code": "A"
+                },
+                {
+                    "factor": 1,
+                    "code": "B"
+                },
+                {
+                    "factor": 1,
+                    "code": "C"
+                },
+                {
+                    "factor": 1,
+                    "code": "D"
+                },
+                {
+                    "factor": 1,
+                    "code": "E"
+                },
+                {
+                    "factor": 1,
+                    "code": "F"
+                },
+                {
+                    "factor": 1,
+                    "code": "G"
+                },
+                {
+                    "factor": 1,
+                    "code": "H"
+                },
+                {
+                    "factor": 1,
+                    "code": "I"
+                },
+                {
+                    "factor": 1,
+                    "code": "J"
+                }
+            ]
+        },
+        {
+            "description": "这是一个目标描述6",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 1,
+                    "code": "A"
+                },
+                {
+                    "factor": 1,
+                    "code": "B"
+                },
+                {
+                    "factor": 1,
+                    "code": "C"
+                },
+                {
+                    "factor": 1,
+                    "code": "D"
+                },
+                {
+                    "factor": 1,
+                    "code": "E"
+                },
+                {
+                    "factor": 1,
+                    "code": "F"
+                },
+                {
+                    "factor": 1,
+                    "code": "G"
+                },
+                {
+                    "factor": 1,
+                    "code": "H"
+                },
+                {
+                    "factor": 1,
+                    "code": "I"
+                },
+                {
+                    "factor": 1,
+                    "code": "J"
+                }
+            ]
+        },
+        {
+            "description": "这是一个目标描述7",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 1,
+                    "code": "A"
+                },
+                {
+                    "factor": 1,
+                    "code": "B"
+                },
+                {
+                    "factor": 1,
+                    "code": "C"
+                },
+                {
+                    "factor": 1,
+                    "code": "D"
+                },
+                {
+                    "factor": 1,
+                    "code": "E"
+                },
+                {
+                    "factor": 1,
+                    "code": "F"
+                },
+                {
+                    "factor": 1,
+                    "code": "G"
+                },
+                {
+                    "factor": 1,
+                    "code": "H"
+                },
+                {
+                    "factor": 1,
+                    "code": "I"
+                },
+                {
+                    "factor": 1,
+                    "code": "J"
+                }
+            ]
+        },
+        {
+            "description": "这是一个目标描述8",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 1,
+                    "code": "A"
+                },
+                {
+                    "factor": 1,
+                    "code": "B"
+                },
+                {
+                    "factor": 1,
+                    "code": "C"
+                },
+                {
+                    "factor": 1,
+                    "code": "D"
+                },
+                {
+                    "factor": 1,
+                    "code": "E"
+                },
+                {
+                    "factor": 1,
+                    "code": "F"
+                },
+                {
+                    "factor": 1,
+                    "code": "G"
+                },
+                {
+                    "factor": 1,
+                    "code": "H"
+                },
+                {
+                    "factor": 1,
+                    "code": "I"
+                },
+                {
+                    "factor": 1,
+                    "code": "J"
+                }
+            ]
+        },
+        {
+            "description": "这是一个目标描述9",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 1,
+                    "code": "A"
+                },
+                {
+                    "factor": 1,
+                    "code": "B"
+                },
+                {
+                    "factor": 1,
+                    "code": "C"
+                },
+                {
+                    "factor": 1,
+                    "code": "D"
+                },
+                {
+                    "factor": 1,
+                    "code": "E"
+                },
+                {
+                    "factor": 1,
+                    "code": "F"
+                },
+                {
+                    "factor": 1,
+                    "code": "G"
+                },
+                {
+                    "factor": 1,
+                    "code": "H"
+                },
+                {
+                    "factor": 1,
+                    "code": "I"
+                },
+                {
+                    "factor": 1,
+                    "code": "J"
+                }
+            ]
+        },
+        {
+            "description": "这是一个目标描述10",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 1,
+                    "code": "A"
+                },
+                {
+                    "factor": 1,
+                    "code": "B"
+                },
+                {
+                    "factor": 1,
+                    "code": "C"
+                },
+                {
+                    "factor": 1,
+                    "code": "D"
+                },
+                {
+                    "factor": 1,
+                    "code": "E"
+                },
+                {
+                    "factor": 1,
+                    "code": "F"
+                },
+                {
+                    "factor": 1,
+                    "code": "G"
+                },
+                {
+                    "factor": 1,
+                    "code": "H"
+                },
+                {
+                    "factor": 1,
+                    "code": "I"
+                },
+                {
+                    "factor": 1,
+                    "code": "J"
+                }
+            ]
+        }
+    ]
+}
+
+2021-04-09 17:33:37.887 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx",
+    "Date": "Fri, 09 Apr 2021 09:33:07 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "code": 1,
+    "message": "成功",
+    "result": {
+        "id": 22,
+        "ocId": 33834,
+        "passScore": 0.6,
+        "updateTime": 1617960787000,
+        "linkList": [
+            {
+                "id": 318,
+                "name": "作业1",
+                "factor": 10.0,
+                "code": "A"
+            },
+            {
+                "id": 319,
+                "name": "作业2",
+                "factor": 10.0,
+                "code": "B"
+            },
+            {
+                "id": 320,
+                "name": "作业3",
+                "factor": 10.0,
+                "code": "C"
+            },
+            {
+                "id": 321,
+                "name": "作业4",
+                "factor": 10.0,
+                "code": "D"
+            },
+            {
+                "id": 322,
+                "name": "作业5",
+                "factor": 10.0,
+                "code": "E"
+            },
+            {
+                "id": 323,
+                "name": "作业6",
+                "factor": 10.0,
+                "code": "F"
+            },
+            {
+                "id": 324,
+                "name": "作业7",
+                "factor": 10.0,
+                "code": "G"
+            },
+            {
+                "id": 325,
+                "name": "作业8",
+                "factor": 10.0,
+                "code": "H"
+            },
+            {
+                "id": 326,
+                "name": "作业9",
+                "factor": 10.0,
+                "code": "I"
+            },
+            {
+                "id": 327,
+                "name": "作业10",
+                "factor": 10.0,
+                "code": "J"
+            }
+        ],
+        "outcomeList": [
+            {
+                "id": 333,
+                "description": "这是一个目标描述1",
+                "factor": 10.0,
+                "code": "1",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 333,
+                        "linkId": 318,
+                        "name": "作业1",
+                        "factor": 1.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A1"
+                    },
+                    {
+                        "outcomeId": 333,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 1.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B1"
+                    },
+                    {
+                        "outcomeId": 333,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 1.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C1"
+                    },
+                    {
+                        "outcomeId": 333,
+                        "linkId": 321,
+                        "name": "作业4",
+                        "factor": 1.0,
+                        "code": "D",
+                        "outcomeLinkCode": "D1"
+                    },
+                    {
+                        "outcomeId": 333,
+                        "linkId": 322,
+                        "name": "作业5",
+                        "factor": 1.0,
+                        "code": "E",
+                        "outcomeLinkCode": "E1"
+                    },
+                    {
+                        "outcomeId": 333,
+                        "linkId": 323,
+                        "name": "作业6",
+                        "factor": 1.0,
+                        "code": "F",
+                        "outcomeLinkCode": "F1"
+                    },
+                    {
+                        "outcomeId": 333,
+                        "linkId": 324,
+                        "name": "作业7",
+                        "factor": 1.0,
+                        "code": "G",
+                        "outcomeLinkCode": "G1"
+                    },
+                    {
+                        "outcomeId": 333,
+                        "linkId": 325,
+                        "name": "作业8",
+                        "factor": 1.0,
+                        "code": "H",
+                        "outcomeLinkCode": "H1"
+                    },
+                    {
+                        "outcomeId": 333,
+                        "linkId": 326,
+                        "name": "作业9",
+                        "factor": 1.0,
+                        "code": "I",
+                        "outcomeLinkCode": "I1"
+                    },
+                    {
+                        "outcomeId": 333,
+                        "linkId": 327,
+                        "name": "作业10",
+                        "factor": 1.0,
+                        "code": "J",
+                        "outcomeLinkCode": "J1"
+                    }
+                ]
+            },
+            {
+                "id": 342,
+                "description": "这是一个目标描述10",
+                "factor": 10.0,
+                "code": "10",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 342,
+                        "linkId": 318,
+                        "name": "作业1",
+                        "factor": 1.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A10"
+                    },
+                    {
+                        "outcomeId": 342,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 1.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B10"
+                    },
+                    {
+                        "outcomeId": 342,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 1.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C10"
+                    },
+                    {
+                        "outcomeId": 342,
+                        "linkId": 321,
+                        "name": "作业4",
+                        "factor": 1.0,
+                        "code": "D",
+                        "outcomeLinkCode": "D10"
+                    },
+                    {
+                        "outcomeId": 342,
+                        "linkId": 322,
+                        "name": "作业5",
+                        "factor": 1.0,
+                        "code": "E",
+                        "outcomeLinkCode": "E10"
+                    },
+                    {
+                        "outcomeId": 342,
+                        "linkId": 323,
+                        "name": "作业6",
+                        "factor": 1.0,
+                        "code": "F",
+                        "outcomeLinkCode": "F10"
+                    },
+                    {
+                        "outcomeId": 342,
+                        "linkId": 324,
+                        "name": "作业7",
+                        "factor": 1.0,
+                        "code": "G",
+                        "outcomeLinkCode": "G10"
+                    },
+                    {
+                        "outcomeId": 342,
+                        "linkId": 325,
+                        "name": "作业8",
+                        "factor": 1.0,
+                        "code": "H",
+                        "outcomeLinkCode": "H10"
+                    },
+                    {
+                        "outcomeId": 342,
+                        "linkId": 326,
+                        "name": "作业9",
+                        "factor": 1.0,
+                        "code": "I",
+                        "outcomeLinkCode": "I10"
+                    },
+                    {
+                        "outcomeId": 342,
+                        "linkId": 327,
+                        "name": "作业10",
+                        "factor": 1.0,
+                        "code": "J",
+                        "outcomeLinkCode": "J10"
+                    }
+                ]
+            },
+            {
+                "id": 334,
+                "description": "这是一个目标描述2",
+                "factor": 10.0,
+                "code": "2",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 334,
+                        "linkId": 318,
+                        "name": "作业1",
+                        "factor": 1.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A2"
+                    },
+                    {
+                        "outcomeId": 334,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 1.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B2"
+                    },
+                    {
+                        "outcomeId": 334,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 1.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C2"
+                    },
+                    {
+                        "outcomeId": 334,
+                        "linkId": 321,
+                        "name": "作业4",
+                        "factor": 1.0,
+                        "code": "D",
+                        "outcomeLinkCode": "D2"
+                    },
+                    {
+                        "outcomeId": 334,
+                        "linkId": 322,
+                        "name": "作业5",
+                        "factor": 1.0,
+                        "code": "E",
+                        "outcomeLinkCode": "E2"
+                    },
+                    {
+                        "outcomeId": 334,
+                        "linkId": 323,
+                        "name": "作业6",
+                        "factor": 1.0,
+                        "code": "F",
+                        "outcomeLinkCode": "F2"
+                    },
+                    {
+                        "outcomeId": 334,
+                        "linkId": 324,
+                        "name": "作业7",
+                        "factor": 1.0,
+                        "code": "G",
+                        "outcomeLinkCode": "G2"
+                    },
+                    {
+                        "outcomeId": 334,
+                        "linkId": 325,
+                        "name": "作业8",
+                        "factor": 1.0,
+                        "code": "H",
+                        "outcomeLinkCode": "H2"
+                    },
+                    {
+                        "outcomeId": 334,
+                        "linkId": 326,
+                        "name": "作业9",
+                        "factor": 1.0,
+                        "code": "I",
+                        "outcomeLinkCode": "I2"
+                    },
+                    {
+                        "outcomeId": 334,
+                        "linkId": 327,
+                        "name": "作业10",
+                        "factor": 1.0,
+                        "code": "J",
+                        "outcomeLinkCode": "J2"
+                    }
+                ]
+            },
+            {
+                "id": 335,
+                "description": "这是一个目标描述3",
+                "factor": 10.0,
+                "code": "3",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 335,
+                        "linkId": 318,
+                        "name": "作业1",
+                        "factor": 1.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A3"
+                    },
+                    {
+                        "outcomeId": 335,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 1.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B3"
+                    },
+                    {
+                        "outcomeId": 335,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 1.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C3"
+                    },
+                    {
+                        "outcomeId": 335,
+                        "linkId": 321,
+                        "name": "作业4",
+                        "factor": 1.0,
+                        "code": "D",
+                        "outcomeLinkCode": "D3"
+                    },
+                    {
+                        "outcomeId": 335,
+                        "linkId": 322,
+                        "name": "作业5",
+                        "factor": 1.0,
+                        "code": "E",
+                        "outcomeLinkCode": "E3"
+                    },
+                    {
+                        "outcomeId": 335,
+                        "linkId": 323,
+                        "name": "作业6",
+                        "factor": 1.0,
+                        "code": "F",
+                        "outcomeLinkCode": "F3"
+                    },
+                    {
+                        "outcomeId": 335,
+                        "linkId": 324,
+                        "name": "作业7",
+                        "factor": 1.0,
+                        "code": "G",
+                        "outcomeLinkCode": "G3"
+                    },
+                    {
+                        "outcomeId": 335,
+                        "linkId": 325,
+                        "name": "作业8",
+                        "factor": 1.0,
+                        "code": "H",
+                        "outcomeLinkCode": "H3"
+                    },
+                    {
+                        "outcomeId": 335,
+                        "linkId": 326,
+                        "name": "作业9",
+                        "factor": 1.0,
+                        "code": "I",
+                        "outcomeLinkCode": "I3"
+                    },
+                    {
+                        "outcomeId": 335,
+                        "linkId": 327,
+                        "name": "作业10",
+                        "factor": 1.0,
+                        "code": "J",
+                        "outcomeLinkCode": "J3"
+                    }
+                ]
+            },
+            {
+                "id": 336,
+                "description": "这是一个目标描述4",
+                "factor": 10.0,
+                "code": "4",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 336,
+                        "linkId": 318,
+                        "name": "作业1",
+                        "factor": 1.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A4"
+                    },
+                    {
+                        "outcomeId": 336,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 1.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B4"
+                    },
+                    {
+                        "outcomeId": 336,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 1.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C4"
+                    },
+                    {
+                        "outcomeId": 336,
+                        "linkId": 321,
+                        "name": "作业4",
+                        "factor": 1.0,
+                        "code": "D",
+                        "outcomeLinkCode": "D4"
+                    },
+                    {
+                        "outcomeId": 336,
+                        "linkId": 322,
+                        "name": "作业5",
+                        "factor": 1.0,
+                        "code": "E",
+                        "outcomeLinkCode": "E4"
+                    },
+                    {
+                        "outcomeId": 336,
+                        "linkId": 323,
+                        "name": "作业6",
+                        "factor": 1.0,
+                        "code": "F",
+                        "outcomeLinkCode": "F4"
+                    },
+                    {
+                        "outcomeId": 336,
+                        "linkId": 324,
+                        "name": "作业7",
+                        "factor": 1.0,
+                        "code": "G",
+                        "outcomeLinkCode": "G4"
+                    },
+                    {
+                        "outcomeId": 336,
+                        "linkId": 325,
+                        "name": "作业8",
+                        "factor": 1.0,
+                        "code": "H",
+                        "outcomeLinkCode": "H4"
+                    },
+                    {
+                        "outcomeId": 336,
+                        "linkId": 326,
+                        "name": "作业9",
+                        "factor": 1.0,
+                        "code": "I",
+                        "outcomeLinkCode": "I4"
+                    },
+                    {
+                        "outcomeId": 336,
+                        "linkId": 327,
+                        "name": "作业10",
+                        "factor": 1.0,
+                        "code": "J",
+                        "outcomeLinkCode": "J4"
+                    }
+                ]
+            },
+            {
+                "id": 337,
+                "description": "这是一个目标描述5",
+                "factor": 10.0,
+                "code": "5",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 337,
+                        "linkId": 318,
+                        "name": "作业1",
+                        "factor": 1.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A5"
+                    },
+                    {
+                        "outcomeId": 337,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 1.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B5"
+                    },
+                    {
+                        "outcomeId": 337,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 1.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C5"
+                    },
+                    {
+                        "outcomeId": 337,
+                        "linkId": 321,
+                        "name": "作业4",
+                        "factor": 1.0,
+                        "code": "D",
+                        "outcomeLinkCode": "D5"
+                    },
+                    {
+                        "outcomeId": 337,
+                        "linkId": 322,
+                        "name": "作业5",
+                        "factor": 1.0,
+                        "code": "E",
+                        "outcomeLinkCode": "E5"
+                    },
+                    {
+                        "outcomeId": 337,
+                        "linkId": 323,
+                        "name": "作业6",
+                        "factor": 1.0,
+                        "code": "F",
+                        "outcomeLinkCode": "F5"
+                    },
+                    {
+                        "outcomeId": 337,
+                        "linkId": 324,
+                        "name": "作业7",
+                        "factor": 1.0,
+                        "code": "G",
+                        "outcomeLinkCode": "G5"
+                    },
+                    {
+                        "outcomeId": 337,
+                        "linkId": 325,
+                        "name": "作业8",
+                        "factor": 1.0,
+                        "code": "H",
+                        "outcomeLinkCode": "H5"
+                    },
+                    {
+                        "outcomeId": 337,
+                        "linkId": 326,
+                        "name": "作业9",
+                        "factor": 1.0,
+                        "code": "I",
+                        "outcomeLinkCode": "I5"
+                    },
+                    {
+                        "outcomeId": 337,
+                        "linkId": 327,
+                        "name": "作业10",
+                        "factor": 1.0,
+                        "code": "J",
+                        "outcomeLinkCode": "J5"
+                    }
+                ]
+            },
+            {
+                "id": 338,
+                "description": "这是一个目标描述6",
+                "factor": 10.0,
+                "code": "6",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 338,
+                        "linkId": 318,
+                        "name": "作业1",
+                        "factor": 1.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A6"
+                    },
+                    {
+                        "outcomeId": 338,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 1.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B6"
+                    },
+                    {
+                        "outcomeId": 338,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 1.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C6"
+                    },
+                    {
+                        "outcomeId": 338,
+                        "linkId": 321,
+                        "name": "作业4",
+                        "factor": 1.0,
+                        "code": "D",
+                        "outcomeLinkCode": "D6"
+                    },
+                    {
+                        "outcomeId": 338,
+                        "linkId": 322,
+                        "name": "作业5",
+                        "factor": 1.0,
+                        "code": "E",
+                        "outcomeLinkCode": "E6"
+                    },
+                    {
+                        "outcomeId": 338,
+                        "linkId": 323,
+                        "name": "作业6",
+                        "factor": 1.0,
+                        "code": "F",
+                        "outcomeLinkCode": "F6"
+                    },
+                    {
+                        "outcomeId": 338,
+                        "linkId": 324,
+                        "name": "作业7",
+                        "factor": 1.0,
+                        "code": "G",
+                        "outcomeLinkCode": "G6"
+                    },
+                    {
+                        "outcomeId": 338,
+                        "linkId": 325,
+                        "name": "作业8",
+                        "factor": 1.0,
+                        "code": "H",
+                        "outcomeLinkCode": "H6"
+                    },
+                    {
+                        "outcomeId": 338,
+                        "linkId": 326,
+                        "name": "作业9",
+                        "factor": 1.0,
+                        "code": "I",
+                        "outcomeLinkCode": "I6"
+                    },
+                    {
+                        "outcomeId": 338,
+                        "linkId": 327,
+                        "name": "作业10",
+                        "factor": 1.0,
+                        "code": "J",
+                        "outcomeLinkCode": "J6"
+                    }
+                ]
+            },
+            {
+                "id": 339,
+                "description": "这是一个目标描述7",
+                "factor": 10.0,
+                "code": "7",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 339,
+                        "linkId": 318,
+                        "name": "作业1",
+                        "factor": 1.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A7"
+                    },
+                    {
+                        "outcomeId": 339,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 1.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B7"
+                    },
+                    {
+                        "outcomeId": 339,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 1.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C7"
+                    },
+                    {
+                        "outcomeId": 339,
+                        "linkId": 321,
+                        "name": "作业4",
+                        "factor": 1.0,
+                        "code": "D",
+                        "outcomeLinkCode": "D7"
+                    },
+                    {
+                        "outcomeId": 339,
+                        "linkId": 322,
+                        "name": "作业5",
+                        "factor": 1.0,
+                        "code": "E",
+                        "outcomeLinkCode": "E7"
+                    },
+                    {
+                        "outcomeId": 339,
+                        "linkId": 323,
+                        "name": "作业6",
+                        "factor": 1.0,
+                        "code": "F",
+                        "outcomeLinkCode": "F7"
+                    },
+                    {
+                        "outcomeId": 339,
+                        "linkId": 324,
+                        "name": "作业7",
+                        "factor": 1.0,
+                        "code": "G",
+                        "outcomeLinkCode": "G7"
+                    },
+                    {
+                        "outcomeId": 339,
+                        "linkId": 325,
+                        "name": "作业8",
+                        "factor": 1.0,
+                        "code": "H",
+                        "outcomeLinkCode": "H7"
+                    },
+                    {
+                        "outcomeId": 339,
+                        "linkId": 326,
+                        "name": "作业9",
+                        "factor": 1.0,
+                        "code": "I",
+                        "outcomeLinkCode": "I7"
+                    },
+                    {
+                        "outcomeId": 339,
+                        "linkId": 327,
+                        "name": "作业10",
+                        "factor": 1.0,
+                        "code": "J",
+                        "outcomeLinkCode": "J7"
+                    }
+                ]
+            },
+            {
+                "id": 340,
+                "description": "这是一个目标描述8",
+                "factor": 10.0,
+                "code": "8",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 340,
+                        "linkId": 318,
+                        "name": "作业1",
+                        "factor": 1.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A8"
+                    },
+                    {
+                        "outcomeId": 340,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 1.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B8"
+                    },
+                    {
+                        "outcomeId": 340,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 1.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C8"
+                    },
+                    {
+                        "outcomeId": 340,
+                        "linkId": 321,
+                        "name": "作业4",
+                        "factor": 1.0,
+                        "code": "D",
+                        "outcomeLinkCode": "D8"
+                    },
+                    {
+                        "outcomeId": 340,
+                        "linkId": 322,
+                        "name": "作业5",
+                        "factor": 1.0,
+                        "code": "E",
+                        "outcomeLinkCode": "E8"
+                    },
+                    {
+                        "outcomeId": 340,
+                        "linkId": 323,
+                        "name": "作业6",
+                        "factor": 1.0,
+                        "code": "F",
+                        "outcomeLinkCode": "F8"
+                    },
+                    {
+                        "outcomeId": 340,
+                        "linkId": 324,
+                        "name": "作业7",
+                        "factor": 1.0,
+                        "code": "G",
+                        "outcomeLinkCode": "G8"
+                    },
+                    {
+                        "outcomeId": 340,
+                        "linkId": 325,
+                        "name": "作业8",
+                        "factor": 1.0,
+                        "code": "H",
+                        "outcomeLinkCode": "H8"
+                    },
+                    {
+                        "outcomeId": 340,
+                        "linkId": 326,
+                        "name": "作业9",
+                        "factor": 1.0,
+                        "code": "I",
+                        "outcomeLinkCode": "I8"
+                    },
+                    {
+                        "outcomeId": 340,
+                        "linkId": 327,
+                        "name": "作业10",
+                        "factor": 1.0,
+                        "code": "J",
+                        "outcomeLinkCode": "J8"
+                    }
+                ]
+            },
+            {
+                "id": 341,
+                "description": "这是一个目标描述9",
+                "factor": 10.0,
+                "code": "9",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 341,
+                        "linkId": 318,
+                        "name": "作业1",
+                        "factor": 1.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A9"
+                    },
+                    {
+                        "outcomeId": 341,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 1.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B9"
+                    },
+                    {
+                        "outcomeId": 341,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 1.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C9"
+                    },
+                    {
+                        "outcomeId": 341,
+                        "linkId": 321,
+                        "name": "作业4",
+                        "factor": 1.0,
+                        "code": "D",
+                        "outcomeLinkCode": "D9"
+                    },
+                    {
+                        "outcomeId": 341,
+                        "linkId": 322,
+                        "name": "作业5",
+                        "factor": 1.0,
+                        "code": "E",
+                        "outcomeLinkCode": "E9"
+                    },
+                    {
+                        "outcomeId": 341,
+                        "linkId": 323,
+                        "name": "作业6",
+                        "factor": 1.0,
+                        "code": "F",
+                        "outcomeLinkCode": "F9"
+                    },
+                    {
+                        "outcomeId": 341,
+                        "linkId": 324,
+                        "name": "作业7",
+                        "factor": 1.0,
+                        "code": "G",
+                        "outcomeLinkCode": "G9"
+                    },
+                    {
+                        "outcomeId": 341,
+                        "linkId": 325,
+                        "name": "作业8",
+                        "factor": 1.0,
+                        "code": "H",
+                        "outcomeLinkCode": "H9"
+                    },
+                    {
+                        "outcomeId": 341,
+                        "linkId": 326,
+                        "name": "作业9",
+                        "factor": 1.0,
+                        "code": "I",
+                        "outcomeLinkCode": "I9"
+                    },
+                    {
+                        "outcomeId": 341,
+                        "linkId": 327,
+                        "name": "作业10",
+                        "factor": 1.0,
+                        "code": "J",
+                        "outcomeLinkCode": "J9"
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+2021-04-09 17:33:37.887 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 399.9 ms, response_length: 0 bytes
+2021-04-09 17:33:37.892 | INFO     | httprunner.response:extract:176 - extract mapping: {'linkList1': 318, 'linkList2': 319, 'linkList3': 320, 'linkList4': 321, 'linkList5': 322, 'linkList6': 323, 'linkList7': 324, 'linkList8': 325, 'linkList9': 326, 'linkList10': 327, 'outcomeList1': 333, 'outcomeList2': 342, 'outcomeList3': 334, 'outcomeList4': 335, 'outcomeList5': 336, 'outcomeList6': 337, 'outcomeList7': 338, 'outcomeList8': 339, 'outcomeList9': 340, 'outcomeList10': 341}
+2021-04-09 17:33:37.893 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-04-09 17:33:37.894 | INFO     | httprunner.runner:__run_step:304 - run step end: 新建OBE设置信息 <<<<<<
+
+2021-04-09 17:33:37.895 | INFO     | httprunner.runner:__run_step:292 - run step begin: 修改OBE设置信息 >>>>>>
+2021-04-09 17:33:38.030 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.10.181, Port: 51133
+2021-04-09 17:33:38.030 | DEBUG    | httprunner.client:request:194 - server IP: 121.36.22.149, Port: 443
+2021-04-09 17:33:38.031 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://courseapi.tongshike.cn/obe
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "Authorization": "5E2D125DE20AEB79D2688A51BF486952",
+    "HRUN-Request-ID": "HRUN-d04fa00a-c7be-404c-bf29-7e3fc5d0c8a4-817897",
+    "Content-Length": "674"
+}
+cookies  : {}
+body     : {
+    "id": 7,
+    "ocId": 33834,
+    "passScore": 0.6,
+    "linkList": [
+        {
+            "id": 318,
+            "name": "作业"
+        },
+        {
+            "id": 319,
+            "name": "作业2"
+        },
+        {
+            "id": 320,
+            "name": "作业3"
+        }
+    ],
+    "outcomeList": [
+        {
+            "id": 333,
+            "description": "这是一个目标描述",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 10,
+                    "code": "A"
+                },
+                {
+                    "factor": 10,
+                    "code": "B"
+                }
+            ]
+        },
+        {
+            "id": 342,
+            "description": "这是一个目标描述2",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 10,
+                    "code": "A"
+                },
+                {
+                    "factor": 10,
+                    "code": "C"
+                }
+            ]
+        },
+        {
+            "id": 334,
+            "description": "这是一个目标描述3",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 10,
+                    "code": "A"
+                },
+                {
+                    "factor": 10,
+                    "code": "B"
+                }
+            ]
+        }
+    ]
+}
+
+2021-04-09 17:33:38.032 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx",
+    "Date": "Fri, 09 Apr 2021 09:33:07 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "code": 1,
+    "message": "成功",
+    "result": {
+        "id": 22,
+        "ocId": 33834,
+        "passScore": 0.6,
+        "updateTime": 1617960788000,
+        "linkList": [
+            {
+                "id": 318,
+                "name": "作业",
+                "factor": 30.0,
+                "code": "A"
+            },
+            {
+                "id": 319,
+                "name": "作业2",
+                "factor": 20.0,
+                "code": "B"
+            },
+            {
+                "id": 320,
+                "name": "作业3",
+                "factor": 10.0,
+                "code": "C"
+            }
+        ],
+        "outcomeList": [
+            {
+                "id": 333,
+                "description": "这是一个目标描述",
+                "factor": 20.0,
+                "code": "1",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 333,
+                        "linkId": 318,
+                        "name": "作业",
+                        "factor": 10.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A1"
+                    },
+                    {
+                        "outcomeId": 333,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 10.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B1"
+                    }
+                ]
+            },
+            {
+                "id": 342,
+                "description": "这是一个目标描述2",
+                "factor": 20.0,
+                "code": "2",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 342,
+                        "linkId": 318,
+                        "name": "作业",
+                        "factor": 10.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A2"
+                    },
+                    {
+                        "outcomeId": 342,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 10.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C1"
+                    }
+                ]
+            },
+            {
+                "id": 334,
+                "description": "这是一个目标描述3",
+                "factor": 20.0,
+                "code": "3",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 334,
+                        "linkId": 318,
+                        "name": "作业",
+                        "factor": 10.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A3"
+                    },
+                    {
+                        "outcomeId": 334,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 10.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B2"
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+2021-04-09 17:33:38.032 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 131.49 ms, response_length: 0 bytes
+2021-04-09 17:33:38.033 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-04-09 17:33:38.033 | INFO     | httprunner.runner:__run_step:304 - run step end: 修改OBE设置信息 <<<<<<
+
+2021-04-09 17:33:38.033 | INFO     | httprunner.runner:__run_step:292 - run step begin: 查询OBE评价规则 >>>>>>
+2021-04-09 17:33:38.074 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.10.181, Port: 51133
+2021-04-09 17:33:38.074 | DEBUG    | httprunner.client:request:194 - server IP: 121.36.22.149, Port: 443
+2021-04-09 17:33:38.075 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://courseapi.tongshike.cn/obe?ocId=33834
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "Authorization": "5E2D125DE20AEB79D2688A51BF486952",
+    "HRUN-Request-ID": "HRUN-d04fa00a-c7be-404c-bf29-7e3fc5d0c8a4-818034"
+}
+cookies  : {}
+body     : None
+
+2021-04-09 17:33:38.076 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx",
+    "Date": "Fri, 09 Apr 2021 09:33:07 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "code": 1,
+    "message": "成功",
+    "result": {
+        "id": 22,
+        "ocId": 33834,
+        "passScore": 0.6,
+        "updateTime": 1617960788000,
+        "linkList": [
+            {
+                "id": 318,
+                "name": "作业",
+                "factor": 30.0,
+                "code": "A"
+            },
+            {
+                "id": 319,
+                "name": "作业2",
+                "factor": 20.0,
+                "code": "B"
+            },
+            {
+                "id": 320,
+                "name": "作业3",
+                "factor": 10.0,
+                "code": "C"
+            }
+        ],
+        "outcomeList": [
+            {
+                "id": 333,
+                "description": "这是一个目标描述",
+                "factor": 20.0,
+                "code": "1",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 333,
+                        "linkId": 318,
+                        "name": "作业",
+                        "factor": 10.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A1"
+                    },
+                    {
+                        "outcomeId": 333,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 10.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B1"
+                    }
+                ]
+            },
+            {
+                "id": 342,
+                "description": "这是一个目标描述2",
+                "factor": 20.0,
+                "code": "2",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 342,
+                        "linkId": 318,
+                        "name": "作业",
+                        "factor": 10.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A2"
+                    },
+                    {
+                        "outcomeId": 342,
+                        "linkId": 320,
+                        "name": "作业3",
+                        "factor": 10.0,
+                        "code": "C",
+                        "outcomeLinkCode": "C1"
+                    }
+                ]
+            },
+            {
+                "id": 334,
+                "description": "这是一个目标描述3",
+                "factor": 20.0,
+                "code": "3",
+                "outcomeLinkDTOList": [
+                    {
+                        "outcomeId": 334,
+                        "linkId": 318,
+                        "name": "作业",
+                        "factor": 10.0,
+                        "code": "A",
+                        "outcomeLinkCode": "A3"
+                    },
+                    {
+                        "outcomeId": 334,
+                        "linkId": 319,
+                        "name": "作业2",
+                        "factor": 10.0,
+                        "code": "B",
+                        "outcomeLinkCode": "B2"
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+2021-04-09 17:33:38.076 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 39.71 ms, response_length: 0 bytes
+2021-04-09 17:33:38.077 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-04-09 17:33:38.077 | INFO     | httprunner.runner:__run_step:304 - run step end: 查询OBE评价规则 <<<<<<
+
+2021-04-09 17:33:38.077 | INFO     | httprunner.runner:test_start:460 - generate testcase log: C:\AutomationTest\HTTPRUNNERS\httprunnerATT\logs\d04fa00a-c7be-404c-bf29-7e3fc5d0c8a4.run.log

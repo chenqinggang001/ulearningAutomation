@@ -1,0 +1,320 @@
+2021-04-09 17:33:43.000 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: OBE目标达成度分析, TestCase ID: c992bd88-1552-4743-b932-8ba676d8932f
+2021-04-09 17:33:43.001 | INFO     | httprunner.runner:__run_step:292 - run step begin: 用户登录成功！ >>>>>>
+2021-04-09 17:33:43.222 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.10.181, Port: 51146
+2021-04-09 17:33:43.223 | DEBUG    | httprunner.client:request:194 - server IP: 121.36.22.149, Port: 443
+2021-04-09 17:33:43.226 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://courseapi.tongshike.cn/users/login
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "HRUN-Request-ID": "HRUN-c992bd88-1552-4743-b932-8ba676d8932f-823002",
+    "Content-Length": "59"
+}
+cookies  : {}
+body     : {
+    "loginName": "chenqinggangtea03",
+    "password": "wenhua123"
+}
+
+2021-04-09 17:33:43.229 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx",
+    "Date": "Fri, 09 Apr 2021 09:33:13 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "userId": 6546490,
+    "sex": "1",
+    "headimage": "https://courseweb.tongshike.cn/common/img/defaultHeaderLg.png",
+    "loginName": "chenqinggangtea03",
+    "name": "陈庆港03",
+    "orgId": 1,
+    "roleId": 8,
+    "institutionId": "-1",
+    "authorization": "944488B2AA7F9AA28223FD5E15FC8D9C"
+}
+
+2021-04-09 17:33:43.229 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 220.41 ms, response_length: 0 bytes
+2021-04-09 17:33:43.230 | INFO     | httprunner.response:extract:176 - extract mapping: {'authorization': '944488B2AA7F9AA28223FD5E15FC8D9C'}
+2021-04-09 17:33:43.230 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-04-09 17:33:43.231 | INFO     | httprunner.runner:__run_step:304 - run step end: 用户登录成功！ <<<<<<
+
+2021-04-09 17:33:43.231 | INFO     | httprunner.runner:__run_step:292 - run step begin: 获取课程列表 >>>>>>
+2021-04-09 17:33:43.328 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.10.181, Port: 51146
+2021-04-09 17:33:43.328 | DEBUG    | httprunner.client:request:194 - server IP: 121.36.22.149, Port: 443
+2021-04-09 17:33:43.329 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://courseapi.tongshike.cn/courses?keyword=&publishStatus=1&type=1&pn=1&ps=15&octypeId=&lang=zh
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "Authorization": "944488B2AA7F9AA28223FD5E15FC8D9C",
+    "HRUN-Request-ID": "HRUN-c992bd88-1552-4743-b932-8ba676d8932f-823232"
+}
+cookies  : {}
+body     : None
+
+2021-04-09 17:33:43.330 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx",
+    "Date": "Fri, 09 Apr 2021 09:33:13 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "pn": 1,
+    "ps": 15,
+    "total": 9,
+    "courseList": [
+        {
+            "id": 33834,
+            "creator": 6546435,
+            "name": "内网测试课程",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "981875",
+            "updateTime": 1617888133000,
+            "type": 1,
+            "description": "一些简介",
+            "publishStatus": 1,
+            "userCount": 71,
+            "classCount": 3,
+            "entered": 0,
+            "permissionGroupId": 3,
+            "academyId": 740,
+            "academyName": "中文系",
+            "octypeId": 21
+        },
+        {
+            "id": 33831,
+            "creator": 6546490,
+            "name": "ck_测试退课",
+            "cover": "https://leicloud.ulearning.cn//resources/6546490/202103031522428877.jpg?imageMogr2/crop/!1601.0526315789475x899.9999999999999a0a0/format/jpg/interlace/1",
+            "courseCode": "460413",
+            "updateTime": 1614756171000,
+            "type": 1,
+            "publishStatus": 1,
+            "userCount": 6,
+            "classCount": 2,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": -1,
+            "octypeId": 22
+        },
+        {
+            "id": 33816,
+            "creator": 6546490,
+            "name": "考试作弊回归",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "071463",
+            "updateTime": 1612163880000,
+            "type": 1,
+            "publishStatus": 1,
+            "userCount": 50,
+            "classCount": 1,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": -1
+        },
+        {
+            "id": 33812,
+            "creator": 6546490,
+            "name": "考试独立课程",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "858378",
+            "updateTime": 1611022118000,
+            "type": 1,
+            "publishStatus": 1,
+            "userCount": 51,
+            "classCount": 2,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": -1
+        },
+        {
+            "id": 33804,
+            "creator": 6546490,
+            "name": "没有课件的课程_已结束_cqg",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "730848",
+            "updateTime": 1610422454000,
+            "type": 1,
+            "publishStatus": 1,
+            "userCount": 50,
+            "classCount": 1,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": -1
+        },
+        {
+            "id": 33799,
+            "creator": 6546490,
+            "name": "没有课件的课程_cqg",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "258643",
+            "updateTime": 1610333914000,
+            "type": 1,
+            "publishStatus": 1,
+            "userCount": 49,
+            "classCount": 1,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": -1,
+            "octypeId": 21
+        },
+        {
+            "id": 33794,
+            "creator": 6546490,
+            "name": "APP课件测试课程",
+            "cover": "https://leicloud.ulearning.cn//resources/6546490/202101081512543004.jpg?imageMogr2/crop/!994.9999999999999x560.3421052631578a0a107.35526315789473/format/jpg/interlace/1",
+            "courseCode": "546077",
+            "updateTime": 1610090015000,
+            "type": 1,
+            "publishStatus": 1,
+            "userCount": 50,
+            "classCount": 1,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": -1,
+            "octypeId": 21
+        },
+        {
+            "id": 33780,
+            "creator": 6546490,
+            "name": "封存测试课程_cqg",
+            "cover": "https://leicloud.ulearning.cn//resources/473435/201808230937106793.png?imageView2/1/w/800/h/450",
+            "courseCode": "327192",
+            "updateTime": 1609823887000,
+            "type": 1,
+            "publishStatus": 1,
+            "userCount": 50,
+            "classCount": 1,
+            "entered": 1,
+            "permissionGroupId": 1,
+            "academyId": 0
+        },
+        {
+            "id": 32555,
+            "creator": 5157664,
+            "name": "tuxi_2.0测试课程（tuxitea02创建）",
+            "cover": "https://leicloud.ulearning.cn/resources/5157664/202009101053237316.jpg?imageMogr2/crop/!1438.105263157895x810a0a162/format/jpg/interlace/1",
+            "courseCode": "291867",
+            "updateTime": 1599706406000,
+            "type": 1,
+            "description": "一些简介",
+            "publishStatus": 1,
+            "userCount": 10100,
+            "classCount": 11,
+            "entered": 1,
+            "permissionGroupId": 2
+        }
+    ]
+}
+
+2021-04-09 17:33:43.330 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 95.75 ms, response_length: 0 bytes
+2021-04-09 17:33:43.331 | INFO     | httprunner.response:extract:176 - extract mapping: {'ocid': 33834}
+2021-04-09 17:33:43.331 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2021-04-09 17:33:43.331 | INFO     | httprunner.runner:__run_step:304 - run step end: 获取课程列表 <<<<<<
+
+2021-04-09 17:33:43.332 | INFO     | httprunner.runner:__run_step:292 - run step begin: 测试助教权限，修改课程环节，请求失败 >>>>>>
+2021-04-09 17:33:43.369 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.10.181, Port: 51146
+2021-04-09 17:33:43.370 | DEBUG    | httprunner.client:request:194 - server IP: 121.36.22.149, Port: 443
+2021-04-09 17:33:43.372 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://courseapi.tongshike.cn/obe
+headers  : {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "Authorization": "944488B2AA7F9AA28223FD5E15FC8D9C",
+    "HRUN-Request-ID": "HRUN-c992bd88-1552-4743-b932-8ba676d8932f-823332",
+    "Content-Length": "220"
+}
+cookies  : {}
+body     : {
+    "id": 7,
+    "ocId": 33834,
+    "passScore": 1,
+    "linkList": [
+        {
+            "name": "作业1"
+        }
+    ],
+    "outcomeList": [
+        {
+            "description": "这是一个目标描述1",
+            "outcomeLinkDTOList": [
+                {
+                    "factor": 1,
+                    "code": "A"
+                }
+            ]
+        }
+    ]
+}
+
+2021-04-09 17:33:43.373 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 403
+headers  : {
+    "Server": "nginx",
+    "Date": "Fri, 09 Apr 2021 09:33:13 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "*",
+    "Access-Control-Allow-Methods": "*",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "message": "No permission."
+}
+
+2021-04-09 17:33:43.374 | ERROR    | httprunner.client:request:215 - 403 Client Error:  for url: https://courseapi.tongshike.cn/obe
+2021-04-09 17:33:43.375 | INFO     | httprunner.response:validate:246 - assert status_code equal 403(int)	==> pass
+2021-04-09 17:33:43.375 | INFO     | httprunner.response:validate:246 - assert body.message equal No permission.(str)	==> pass
+2021-04-09 17:33:43.376 | INFO     | httprunner.runner:__run_step:304 - run step end: 测试助教权限，修改课程环节，请求失败 <<<<<<
+
+2021-04-09 17:33:43.377 | INFO     | httprunner.runner:test_start:460 - generate testcase log: C:\AutomationTest\HTTPRUNNERS\httprunnerATT\logs\c992bd88-1552-4743-b932-8ba676d8932f.run.log
