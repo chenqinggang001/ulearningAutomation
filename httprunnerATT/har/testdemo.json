@@ -1,0 +1,115 @@
+{
+    "code": 1,
+    "message": "成功",
+    "result": {
+        "pageNum": 1,
+        "pageSize": 15,
+        "total": 9,
+        "list": [
+            {
+                "relationId": 169915,
+                "type": 3,
+                "fullScore": 100.0,
+                "activityName": "2021-04-15 14:04 作业",
+                "activityCreateTime": 1618466640000,
+                "classNameList": [
+                    "班级2",
+                    "默认班级",
+                    "q r t g yu uii"
+                ]
+            },
+            {
+                "relationId": 169915,
+                "type": 3,
+                "fullScore": 100.0,
+                "activityName": "2021-04-15 14:04 作业",
+                "activityCreateTime": 1618466640000,
+                "classNameList": [
+                    "班级2",
+                    "默认班级",
+                    "q r t g yu uii"
+                ]
+            },
+            {
+                "relationId": 169915,
+                "type": 3,
+                "fullScore": 100.0,
+                "activityName": "2021-04-15 14:04 作业",
+                "activityCreateTime": 1618466640000,
+                "classNameList": [
+                    "班级2",
+                    "默认班级",
+                    "q r t g yu uii"
+                ]
+            },
+            {
+                "relationId": 169914,
+                "type": 3,
+                "fullScore": 100.0,
+                "activityName": "2021-04-15 14:03 作业",
+                "activityCreateTime": 1618466580000,
+                "classNameList": [
+                    "班级2",
+                    "默认班级",
+                    "q r t g yu uii"
+                ]
+            },
+            {
+                "relationId": 169914,
+                "type": 3,
+                "fullScore": 100.0,
+                "activityName": "2021-04-15 14:03 作业",
+                "activityCreateTime": 1618466580000,
+                "classNameList": [
+                    "班级2",
+                    "默认班级",
+                    "q r t g yu uii"
+                ]
+            },
+            {
+                "relationId": 169914,
+                "type": 3,
+                "fullScore": 100.0,
+                "activityName": "2021-04-15 14:03 作业",
+                "activityCreateTime": 1618466580000,
+                "classNameList": [
+                    "班级2",
+                    "默认班级",
+                    "q r t g yu uii"
+                ]
+            },
+            {
+                "relationId": 169910,
+                "type": 3,
+                "fullScore": 100.0,
+                "activityName": "2021-04-12 11:13 作业",
+                "activityCreateTime": 1618197180000,
+                "classNameList": [
+                    "班级2"
+                ]
+            },
+            {
+                "relationId": 169907,
+                "type": 3,
+                "fullScore": 100.0,
+                "activityName": "个人作业OBE",
+                "activityCreateTime": 1618196760000,
+                "classNameList": [
+                    "班级2",
+                    "默认班级"
+                ]
+            },
+            {
+                "relationId": 169907,
+                "type": 3,
+                "fullScore": 100.0,
+                "activityName": "个人作业OBE",
+                "activityCreateTime": 1618196760000,
+                "classNameList": [
+                    "班级2",
+                    "默认班级"
+                ]
+            }
+        ]
+    }
+}

@@ -4,7 +4,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from httprunner import HttpRunner, Config, Step, RunRequest, RunTestCase
-from testcaseOBEEvaluationRule.testcase_00_userlogin_test import TestCseUserLogin
+from testcaseOBEEvaluationRuleDemo2.testcase_00_userlogin_test import TestCseUserLogin
 
 class TestCseOBE(HttpRunner):
     config = (

@@ -13,3 +13,8 @@ def sum_two(m, n):
 
 def sleep(n_secs):
     time.sleep(n_secs)
+
+def get_lists(a):
+    for a in a:
+        for k,v in a.items():
+            return v
