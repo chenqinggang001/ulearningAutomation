@@ -1,10 +1,5 @@
-from platform import python_version_tuple
 import sys
 from pathlib import Path
-
-from json import JSONDecoder,JSONEncoder,JSONDecodeError
-import pytest
-from httprunner import Parameters
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -173,45 +168,7 @@ class TestCaseUserLogin(HttpRunner):
             .with_headers(**{"Content-Type": "application/json","Authorization":"$authorization"})
             .with_params(**{"ocId":"${ocid}","teacherId":"","type":"2","classId":"","keyword":"","pn":"1","ps":"999"})
             .extract()
-            .with_jmespath("body","examid")
-        ),
-        Step(
-            RunRequest("用户登录成功！")
-            .post("/users/login")
-            .with_headers(**{"Content-Type": "application/json"})
-            .with_json({"loginName": "${examid.result.list[10].relationId}","password": "wenhua123"})
-            .extract()
-            .with_jmespath("body.authorization", "authorization")
-            .validate()
-            .assert_equal("status_code", 200)
-        )
-    ]
-class TestCaseUserLogin(HttpRunner):
-    @pytest.mark.parametrize("param", Parameters(
-        {
-            "title": ["demo1"],
-            "user": ["user1", "user2"],
-            "title-user": [("demo4", "4"), ("demo5", "5"), ("dmeo6", "6")],
-            }
-        ),
-    )
-    config = (
-        Config("OBE目标达成度分析-新建OBE设置信息")
-        .variables(loginNameadmin="${ENV(LoginNameCourseAdmin)}",loginNametea="${ENV(LoginNametea)}",password="${ENV(Password)}",HOST="${ENV(TestHOST)}")
-        .base_url("https://${HOST}")
-        .verify(False)
-        .export(*[])
-    )
-    teststeps = [
-        Step(
-            RunRequest("用户登录成功！")
-            .post("/users/login")
-            .with_headers(**{"Content-Type": "application/json"})
-            .with_json({"loginName": "${loginNameadmin}","password": "wenhua123"})
-            .extract()
-            .with_jmespath("body.authorization", "authorization")
-            .validate()
-            .assert_equal("status_code", 200)
+            .with_jmespath("body.result.list[10].relationId","examid")
         )
     ]
 

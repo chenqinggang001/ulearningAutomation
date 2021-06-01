@@ -15,7 +15,7 @@ class TestCseOBE(HttpRunner):
     )
     teststeps = [
         Step(
-            RunTestCase("用户登录成功")
+            RunTeastCase("用户登录成功")
             .call(TestCseUserLogin)
             .export(*["authorization","ocid"])
         ),
@@ -24,6 +24,15 @@ class TestCseOBE(HttpRunner):
             .get("/obe/textbooks")
             .with_headers(**{"Content-Type": "application/json","Authorization":"$authorization"})
             .with_params(**{"ocId":"$ocid"})
+            .validate()
+            .assert_equal("status_code", 200)
+        ),
+        Step(
+            RunRequest("获取课件列表")
+            .get("/obe/textbooks")
+            .with_headers(**{"Content-Type": "application/json","Authorization":"$authorization"})
+            .with_params(**{"ocId":"$ocid"})
+            
             .validate()
             .assert_equal("status_code", 200)
         )
