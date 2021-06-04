@@ -12,8 +12,8 @@ class TestCaseUserLogin(HttpRunner):
         .base_url("https://${HOST}")
         .verify(False)
         .export(*["authorization","ocid","authorizationtea","ocidtea",\
-            "linkList1","linkList2","linkList3","linkList4","linkList5","linkList6","linkList7","linkList8","linkList9","linkList10",\
-            "outcomeList1","outcomeList2","outcomeList3","outcomeList4","outcomeList5","outcomeList6","outcomeList7","outcomeList8","outcomeList9","outcomeList10",\
+            "linkList1","linkList2","linkList3",\
+            "outcomeList1","outcomeList2","outcomeList3",\
             "userId1","userId2","userId3","userId4","classId1","classId2","classId3"])
     )
     teststeps = [
@@ -128,23 +128,9 @@ class TestCaseUserLogin(HttpRunner):
             .with_jmespath("body.result.linkList[0].id","linkList1")
             .with_jmespath("body.result.linkList[1].id","linkList2")
             .with_jmespath("body.result.linkList[2].id","linkList3")
-            .with_jmespath("body.result.linkList[3].id","linkList4")
-            .with_jmespath("body.result.linkList[4].id","linkList5")
-            .with_jmespath("body.result.linkList[5].id","linkList6")
-            .with_jmespath("body.result.linkList[6].id","linkList7")
-            .with_jmespath("body.result.linkList[7].id","linkList8")
-            .with_jmespath("body.result.linkList[8].id","linkList9")
-            .with_jmespath("body.result.linkList[9].id","linkList10")
             .with_jmespath("body.result.outcomeList[0].id","outcomeList1")
             .with_jmespath("body.result.outcomeList[1].id","outcomeList2")
             .with_jmespath("body.result.outcomeList[2].id","outcomeList3")
-            .with_jmespath("body.result.outcomeList[3].id","outcomeList4")
-            .with_jmespath("body.result.outcomeList[4].id","outcomeList5")
-            .with_jmespath("body.result.outcomeList[5].id","outcomeList6")
-            .with_jmespath("body.result.outcomeList[6].id","outcomeList7")
-            .with_jmespath("body.result.outcomeList[7].id","outcomeList8")
-            .with_jmespath("body.result.outcomeList[8].id","outcomeList9")
-            .with_jmespath("body.result.outcomeList[9].id","outcomeList10")
             .validate()
             .assert_equal("status_code", 200)
         ),

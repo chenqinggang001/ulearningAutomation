@@ -10,6 +10,8 @@ from httprunner import Parameters
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 
+from testcases.testcaseOBE2.OBE2_login_test import TestCaseUserLogin
+
 class TestCaseUserLogin(HttpRunner):
     @pytest.mark.parametrize(
         "param", Parameters(
@@ -31,15 +33,10 @@ class TestCaseUserLogin(HttpRunner):
     )
     teststeps = [
         Step(
-            RunRequest("用户登录成功！")
-            .post("/users/login")
-            .with_headers(**{"Content-Type": "application/json"})
-            .with_json({"loginName": "${pram.loginname}", "password": "${pram.password}"})
-            .extract()
-            .with_jmespath("body.authorization", "authorization")
-            .validate()
-            .assert_equal("status_code", 200)
-        )
+            RunTestCase("获取用户信息")
+            .call(TestCaseUserLogin)
+            .export(*["authorization"])
+        ),
     ]
 
 
