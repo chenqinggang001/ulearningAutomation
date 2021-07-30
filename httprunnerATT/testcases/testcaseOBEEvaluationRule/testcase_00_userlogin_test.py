@@ -67,39 +67,39 @@ class TestCseUserLogin(HttpRunner):
                     "passScore": 0.6,
                     "linkList": [
                         {
-                            "name": "作业1"
+                            "name": "作作业"
                         },
                         {
-                            "name": "作业2"
+                            "name": "作作业"
                         },
                         {
-                            "name": "作业3"
+                            "name": "作作业"
                         },
                         {
-                            "name": "作业4"
+                            "name": "作作业"
                         },
                         {
-                            "name": "作业5"
+                            "name": "作作业"
                         },
                         {
-                            "name": "作业6"
+                            "name": "作作业"
                         },
                         {
-                            "name": "作业7"
+                            "name": "作作业"
                         },
                         {
-                            "name": "作业8"
+                            "name": "作作业"
                         },
                         {
-                            "name": "作业9"
+                            "name": "作作业"
                         },
                         {
-                            "name": "作业10"
+                            "name": "作作业"
                         }
                     ],
                     "outcomeList": [
                         {
-                            "description": "这是一个目标描述1",
+                            "description": "这是一个目标描述4",
                             "outcomeLinkDTOList": [
                                 {
                                     "factor": 1,
@@ -144,7 +144,7 @@ class TestCseUserLogin(HttpRunner):
                             ]
                         },
                         {
-                            "description": "这是一个目标描述2",
+                            "description": "这是一个目标描述4",
                             "outcomeLinkDTOList": [
                                 {
                                     "factor": 1,
@@ -189,7 +189,7 @@ class TestCseUserLogin(HttpRunner):
                             ]
                         },
                         {
-                            "description": "这是一个目标描述3",
+                            "description": "这是一个目标描述4",
                             "outcomeLinkDTOList": [
                                 {
                                     "factor": 1,

@@ -1,115 +1,135 @@
 {
-    "code": 1,
-    "message": "成功",
-    "result": {
-        "pageNum": 1,
-        "pageSize": 15,
-        "total": 9,
-        "list": [
-            {
-                "relationId": 169915,
-                "type": 3,
-                "fullScore": 100.0,
-                "activityName": "2021-04-15 14:04 作业",
-                "activityCreateTime": 1618466640000,
-                "classNameList": [
-                    "班级2",
-                    "默认班级",
-                    "q r t g yu uii"
-                ]
-            },
-            {
-                "relationId": 169915,
-                "type": 3,
-                "fullScore": 100.0,
-                "activityName": "2021-04-15 14:04 作业",
-                "activityCreateTime": 1618466640000,
-                "classNameList": [
-                    "班级2",
-                    "默认班级",
-                    "q r t g yu uii"
-                ]
-            },
-            {
-                "relationId": 169915,
-                "type": 3,
-                "fullScore": 100.0,
-                "activityName": "2021-04-15 14:04 作业",
-                "activityCreateTime": 1618466640000,
-                "classNameList": [
-                    "班级2",
-                    "默认班级",
-                    "q r t g yu uii"
-                ]
-            },
-            {
-                "relationId": 169914,
-                "type": 3,
-                "fullScore": 100.0,
-                "activityName": "2021-04-15 14:03 作业",
-                "activityCreateTime": 1618466580000,
-                "classNameList": [
-                    "班级2",
-                    "默认班级",
-                    "q r t g yu uii"
-                ]
-            },
-            {
-                "relationId": 169914,
-                "type": 3,
-                "fullScore": 100.0,
-                "activityName": "2021-04-15 14:03 作业",
-                "activityCreateTime": 1618466580000,
-                "classNameList": [
-                    "班级2",
-                    "默认班级",
-                    "q r t g yu uii"
-                ]
-            },
-            {
-                "relationId": 169914,
-                "type": 3,
-                "fullScore": 100.0,
-                "activityName": "2021-04-15 14:03 作业",
-                "activityCreateTime": 1618466580000,
-                "classNameList": [
-                    "班级2",
-                    "默认班级",
-                    "q r t g yu uii"
-                ]
-            },
-            {
-                "relationId": 169910,
-                "type": 3,
-                "fullScore": 100.0,
-                "activityName": "2021-04-12 11:13 作业",
-                "activityCreateTime": 1618197180000,
-                "classNameList": [
-                    "班级2"
-                ]
-            },
-            {
-                "relationId": 169907,
-                "type": 3,
-                "fullScore": 100.0,
-                "activityName": "个人作业OBE",
-                "activityCreateTime": 1618196760000,
-                "classNameList": [
-                    "班级2",
-                    "默认班级"
-                ]
-            },
-            {
-                "relationId": 169907,
-                "type": 3,
-                "fullScore": 100.0,
-                "activityName": "个人作业OBE",
-                "activityCreateTime": 1618196760000,
-                "classNameList": [
-                    "班级2",
-                    "默认班级"
-                ]
-            }
-        ]
-    }
+    "id": 0,
+    "homeworkTitle": "${__time(Y-M-d H:M:s,)} 作业",
+    "homeworkRequest": "<p>${__time(Y-M-d H:M:s,)} 作业</p>\n",
+    "homeworkContent": "",
+    "fileUpload": "",
+    "autoRemark": 1,
+    "timeSetWay": 1,
+    "showLevel": 0,
+    "allowSyntaxCheck": 1,
+    "allowPostattach": 2,
+    "allowCopy": 2,
+    "allowDraft": 2,
+    "duplicate": 1,
+    "startTime": 1623725640000,
+    "peerReviewCount": 4,
+    "peerReviewTime": null,
+    "endTime": 1625021640000,
+    "isEndTime": "",
+    "lateShipment": "",
+    "lateShipmentTime": null,
+    "grade": 100,
+    "groupCount": 4,
+    "growth": 3,
+    "teacherId": "${teauid}",
+    "selectClass": [],
+    "homeworkType": 9,
+    "classNames": [],
+    "ocId": "${ocId}",
+    "hasStuSubmit": 0,
+    "choicedClassList": [
+        {
+            "classID": ${classId},
+            "code": null,
+            "className": "默认班级",
+            "catalogID": 0,
+            "orgID": 0,
+            "aspID": 0,
+            "keyWord": null,
+            "status": null,
+            "creator": 0,
+            "life": 0,
+            "guest": null,
+            "description": null,
+            "manage": null,
+            "regMethed": null,
+            "regTimeBegin": null,
+            "regTimeEnd": null,
+            "password": null,
+            "lifeForever": null,
+            "lifeBeginDate": null,
+            "lifeEndDate": null,
+            "qq": null,
+            "msn": null,
+            "skype": null,
+            "remark1": "",
+            "remark2": "",
+            "remark3": "",
+            "takeAgain": null,
+            "showCorrect": null,
+            "limitUploadFileSize": 0,
+            "limitSpaceSize": 0,
+            "usedSpaceSize": 0,
+            "availableSpaceSize": 0,
+            "assignSpaceSize": 0,
+            "cellphone": null,
+            "takeIndependent": null,
+            "takeRealPractice": null,
+            "existApproval": 0,
+            "year": 0,
+            "ocId": ${ocId},
+            "count": 0,
+            "classId": ${classId},
+            "ischeckd": true,
+            "isDisabled": false,
+            "startTime": "${__time(Y-M-d H:M:s,)}",
+            "endTime": "",
+            "peerReviewTime": ""
+        }
+    ],
+    "classIDs": [
+        ${classId}
+    ],
+    "homeworkClassList": [
+        {
+            "classID": ${classId},
+            "code": null,
+            "className": "默认班级",
+            "catalogID": 0,
+            "orgID": 0,
+            "aspID": 0,
+            "keyWord": null,
+            "status": null,
+            "creator": 0,
+            "life": 0,
+            "guest": null,
+            "description": null,
+            "manage": null,
+            "regMethed": null,
+            "regTimeBegin": null,
+            "regTimeEnd": null,
+            "password": null,
+            "lifeForever": null,
+            "lifeBeginDate": null,
+            "lifeEndDate": null,
+            "qq": null,
+            "msn": null,
+            "skype": null,
+            "remark1": "",
+            "remark2": "",
+            "remark3": "",
+            "takeAgain": null,
+            "showCorrect": null,
+            "limitUploadFileSize": 0,
+            "limitSpaceSize": 0,
+            "usedSpaceSize": 0,
+            "availableSpaceSize": 0,
+            "assignSpaceSize": 0,
+            "cellphone": null,
+            "takeIndependent": null,
+            "takeRealPractice": null,
+            "existApproval": 0,
+            "year": 0,
+            "ocId": ${ocId},
+            "count": 0,
+            "classId": ${classId},
+            "ischeckd": true,
+            "isDisabled": false,
+            "startTime": ${__time(,)},
+            "endTime": null,
+            "peerReviewTime": null
+        }
+    ],
+    "lang": "zh"
 }
